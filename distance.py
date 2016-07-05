@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-
 # ----------------------------------------------------------------- #
 # Calculates the distance between two points in a coordinate system #
 # ----------------------------------------------------------------- #
@@ -11,10 +10,13 @@ def calculateDistance(x1,x2,y1,y2):
     distance = hypot(x2 - x1, y2 - y1)
     return distance
 
-errorMessage = "Usage:\n\t%s [x1 x2 y1 y2]" % argv[0]
+def main():
+    errorMessage = "Usage:\n\t{} [x1 x2 y1 y2]".format(argv[0])
+    try:
+        distance = calculateDistance(float(argv[1]),float(argv[2]),float(argv[3]),float(argv[4]))
+        print(distance)
+    except:
+        print(errorMessage)
 
-try:
-    distance = calculateDistance(float(argv[1]),float(argv[2]),float(argv[3]),float(argv[4]))
-    print(distance)
-except:
-    print(errorMessage)
+if __name__ == "__main__":
+    main()
