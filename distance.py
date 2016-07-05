@@ -6,14 +6,17 @@
 from math import hypot
 from sys import argv
 
-def calculateDistance(x1,x2,y1,y2):
+
+def calculateDistance(x1, x2, y1, y2):
     distance = hypot(x2 - x1, y2 - y1)
     return distance
+
 
 def main():
     errorMessage = "Usage:\n\t{} [x1 x2 y1 y2]".format(argv[0])
     try:
-        distance = calculateDistance(float(argv[1]),float(argv[2]),float(argv[3]),float(argv[4]))
+        distance = calculateDistance(float(argv[1]), float(argv[2]),
+                                     float(argv[3]), float(argv[4]))
         print(distance)
     except:
         print(errorMessage)
