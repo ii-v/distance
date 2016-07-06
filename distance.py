@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 # ----------------------------------------------------------------- #
 # Calculates the distance between two points in a coordinate system #
 # ----------------------------------------------------------------- #
@@ -8,7 +8,7 @@ from sys import argv
 
 
 def calculateDistance(x1, y1, x2, y2):
-    distance = hypot(x1 - y1, x2 - y2)
+    distance = hypot(x1 - x2, y1 - y2)
     return distance
 
 
